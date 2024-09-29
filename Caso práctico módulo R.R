@@ -55,18 +55,14 @@ print(paste("Número total de pasajeros (antes de la limpieza):", total_passenge
 total_survivors <- data %>%
   filter(Survived == "Yes") %>%
   count()
-
 print(paste("Número total de pasajeros sobrevivientes:", total_survivors$n))
 
-women_survivors <- data_clean %>%
+women_survivors <- data %>%
   filter(Sex == "female", Survived == "Yes") %>%
   count()
-
 print(paste("Número de mujeres sobrevivientes:", women_survivors$n))
-
 
 men_survivors <- data %>%
   filter(Sex == "male", Survived == "Yes") %>%
   count()
-
 print(paste("Número de hombres sobrevivientes:", men_survivors$n))
